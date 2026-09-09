@@ -1,0 +1,17 @@
+
+
+numpy
+scipy
+trimesh
+shapely
+imageio
+Pillow
+PyYAML
+tqdm
+nltk
+einops
+transformers
+diffusers
+huggingface_hub
+openai
+wandb
