@@ -13,7 +13,10 @@ pip install -e .
 python3 download_pretrain_vq.py
 ```
 
-Dataset: we use the preprocessed data from [InstructScene](https://github.com/chenguolin/InstructScene). Run `python3 dataset/download.py` (see [dataset/README.md](dataset/README.md)).
+Download the raw datasets:
+
+- [3D-FRONT](https://www.kaggle.com/datasets/tobetheonly/3d-front)
+- [3D-FUTURE](https://www.kaggle.com/datasets/tobetheonly/3d-future-model)
 
 ## Training (MGDiT)
 
@@ -23,11 +26,10 @@ bash scripts/train.sh 0
 
 Checkpoints: `out/mgdit/checkpoints/`
 
-## Inference (MGDiT only)
+## Inference
 
 ```bash
-bash scripts/inference.sh 0 1099 scratch   # text-to-scene
-bash scripts/inference.sh 0 1099 graph     # graph-to-scene
+bash scripts/inference.sh
 ```
 
 ## Full FreeScene (VLM Graph Designer + MGDiT)
@@ -58,4 +60,4 @@ Output: `out/mgdit/freescene_outputs/`
 
 ## Acknowledgements
 
-We thank [InstructScene](https://github.com/chenguolin/InstructScene) for providing the preprocessed dataset, fVQ-VAE weights, and codebase that this project builds upon.
+We thank [InstructScene](https://github.com/chenguolin/InstructScene) for their excellent codebase and fVQ-VAE weights.
